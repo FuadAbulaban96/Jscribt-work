@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery ui test</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/fontawesome-free-5.11.2-web/css/all.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="ui/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+	<style >
+		body{
+			height: 1000px;
+		    background-image: url(https://colorlib.com/preview/theme/university/images/big_image_2.jpg);
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+		#btn1 ,#btn2{
+			float: right;
+			background-color: transparent;
+			border-style: none;
+			margin: 30px;
+		}
+		#btn2{
+			position: relative;
+		}
+		#icon1 , #icon2{
+			font-size: 50px; 
+			color: #ffffff;
+		}
+		div{
+			position: absolute; 
+			height: 1000px; 
+			width: 0; 
+			top:0;
+			left: 0;
+			background-color: #000; 
+			opacity:0.7;
+		}
+		ul{
+			margin-top: 20%;
+			text-align: center;
+			font-size: xx-large;
+			text-decoration: none; 
+			display:none;
+		}
+		a{
+			text-decoration: none;
+			color: white!important;
+			line-height: 50px;
+
+		}
+	</style>
+	<script type="text/javascript">
+		
+		$("document").ready(function () {
+			
+			var x=1;
+			if (x) {
+			$("#btn1").click(function(){
+				$("div").animate({width:'100%'});
+				$("#btn1").css("z-index","2");
+				x=0;
+				$("ul").css("display","block");
+			});
+			}
+		
+			$("#btn2").click(function(){
+				$("div").animate({width:'0'});
+				$("ul").css("display","none");
+			});
+			$("a").after("<br>");
+			$("a").attr("target","_blanck");
+		});
+	</script>
+</head>
+<body>
+	<button id="btn1">
+		<i id="icon1" class="fas fa-bars"></i>
+	</button>
+	
+	<div>
+		<button id="btn2">	
+			<i id="icon2" class="fas fa-times"></i>
+		</button>
+		
+		<ul>
+ 			<a href="/sobre">Sobre a Navegah</a>
+ 			<a href="/site/">Home</a>
+            <a href="/works">Works</a>
+            <a href="/contato">Contato</a>			
+		</ul>
+	
+	</div>
+</body>
+</html>

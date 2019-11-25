@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery ui test</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="ui/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+  	<script type="text/javascript">
+	  	$( function() {
+		    $( "#draggable" ).draggable();
+		    $( "#droppable" ).droppable({
+		      drop: function( event, ui ) {
+		        $( this )
+		          .addClass( "ui-state-highlight" )
+		          .find( "p" )
+		          .html( "Dropped!" );
+		      	}
+		    });
+	  	} );
+	  	
+  	</script>
+  	<script>
+	  $( function() {
+	    $( "#resizable" ).resizable();
+	  } );
+	</script>
+	<script>
+	  $( function() {
+	    $( "#selectable" ).selectable();
+	  } );
+	</script>
+	<script>
+	  $( function() {
+	    $( "#sortable" ).sortable();
+	    $( "#sortable" ).disableSelection();
+	  } );
+	</script>
+	<script>
+	  $( function() {
+	    $( "#datepicker" ).datepicker();
+	    $( "#anim" ).on( "change", function() {
+	      $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+	    });
+	  } );
+  	</script>
+  	<script>
+	  $( function() {
+	    $( "#accordion" )
+	      .accordion({
+	        header: "> div > h3"
+	      })
+	      .sortable({
+	        axis: "y",
+	        handle: "h3",
+	        stop: function( event, ui ) {
+	          // IE doesn't register the blur when sorting
+	          // so trigger focusout handlers to remove .ui-state-focus
+	          ui.item.children( "h3" ).triggerHandler( "focusout" );
+	 
+	          // Refresh accordion to handle new order
+	          $( this ).accordion( "refresh" );
+	        }
+	      });
+	  } );
+  	</script>
+
+</head>
+<body>
+	<div id="draggable" class="ui-widget-content">
+  		<p>Drag me to my target</p>
+	</div>
+ 
+	<div id="droppable" class="ui-widget-header">
+	  <p>Drop here</p>
+	</div>
+	<div id="resizable" class="ui-widget-content">
+  		<h3 class="ui-widget-header">Resizable</h3>
+	</div>
+ 
+<ol id="selectable">
+  <li class="ui-widget-content">Item 1</li>
+  <li class="ui-widget-content">Item 2</li>
+  <li class="ui-widget-content">Item 3</li>
+  <li class="ui-widget-content">Item 4</li>
+  <li class="ui-widget-content">Item 5</li>
+  <li class="ui-widget-content">Item 6</li>
+  <li class="ui-widget-content">Item 7</li>
+</ol>
+
+<ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+<p>Date: <input type="text" id="datepicker" size="30"></p>
+ 
+<p>Animations:<br>
+  <select id="anim">
+    <option value="show">Show (default)</option>
+    <option value="slideDown">Slide down</option>
+    <option value="fadeIn">Fade in</option>
+    <option value="blind">Blind (UI Effect)</option>
+    <option value="bounce">Bounce (UI Effect)</option>
+    <option value="clip">Clip (UI Effect)</option>
+    <option value="drop">Drop (UI Effect)</option>
+    <option value="fold">Fold (UI Effect)</option>
+    <option value="slide">Slide (UI Effect)</option>
+    <option value="">None</option>
+  </select>
+</p>
+</body>
+</html>

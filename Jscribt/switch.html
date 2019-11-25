@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Switching</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="ui/jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="ui/jquery-ui.css">
+	<style type="text/css">
+		div{
+			display: inline-block;
+			margin: 10px;
+
+		}
+		.red ,.black ,.blue{
+			box-shadow: 10px 10px 10px #054908;
+		}
+		button{
+			margin: 5px;
+		}
+		body{
+			background: linear-gradient(#cccccc ,yellow);
+		}
+	</style>
+	<script type="text/javascript">
+		
+		$("document").ready(function () {
+			
+				$("#btn1").click(function(){
+				$(".blue").fadeIn(300);
+				$(".black,.red").fadeOut(300);
+				
+			});
+
+				$("#btn2").click(function(){
+				$(".red").fadeIn(300);
+				$(".black,.blue").fadeOut(300);
+				
+			});
+
+				$("#btn3").click(function(){
+				$(".black").fadeIn(300);
+				$(".blue,.red").fadeOut(300);
+				
+			});
+
+				$("#btn4").click(function(){
+				$(".blue,.black,.red").fadeIn(300);
+				
+				
+			});
+		
+		
+		});
+	</script>
+</head>
+<body>
+	<div class="row-fluid">
+		<div class="span3"></div>
+		<div class="span6">
+			<div class="container" style="padding:0 30%;">
+				<button id="btn1" class="btn btn-info" >blue</button>
+				<button id="btn2" class="btn btn-danger">red</button>
+				<button id="btn3" class="btn btn-inverse">black</button>
+				<button id="btn4" class="btn btn-success">All</button>
+			</div>
+			<br>
+			<div class="blue" style="height: 200px; width: 200px; background-color: blue;"></div>
+			<div class="black"style="height: 200px; width: 200px; background-color: black;"></div>
+			<div class="blue" style="height: 200px; width: 200px; background-color: blue;"></div>
+			<div class="blue" style="height: 200px; width: 200px; background-color: blue;"></div>
+			<div class="red" style="height: 200px; width: 200px; background-color: red;"></div>
+			<div class="blue" style="height: 200px; width: 200px; background-color: blue;"></div>			
+			<div class="red" style="height: 200px; width: 200px; background-color: red;"></div>
+			<div class="red"style="height: 200px; width: 200px; background-color: red;"></div>
+			<div class="black" style="height: 200px; width: 200px; background-color: black;"></div>
+		</div>
+		<div class="span3"></div>
+	</div>
+</body>
+</html>

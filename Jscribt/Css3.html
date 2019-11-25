@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@font-face{
+			font-family: Fuad;
+			src:url(fonts/Rubik-Black.ttf);
+		}
+
+		p{
+			font-family: Fuad;
+			text-align: center;
+		}	
+		#div1{
+
+			width: 400px;
+			height: 400px;
+			margin: 200px; 
+			padding:40px 20px;
+			background: linear-gradient(to bottom right ,red ,yellow); 
+			box-shadow: 10px 10px 10px grey;
+			position: absolute;z-index: 0;
+			transform:  translate(50px,100px);
+			transform:scale(2,3);
+		}
+		#div2{
+
+			width: 400px; 
+			height: 400px; 
+			margin: 130px; 
+			padding:40px 20px;
+			background: linear-gradient(to bottom right ,red ,yellow); 
+			box-shadow: 10px 10px 10px grey;
+			transform: rotate(45deg); 
+			position: absolute;
+			z-index: 1;
+			transform:skew(20deg,30deg); 
+			transition:width 4s;rotate:(45deg); 
+		}
+		#div2:hover{
+
+			width: 500px;
+			transform: rotate(60deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"> 
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+	</div>
+	<div id="div2"></div>
+</body>
+</html>

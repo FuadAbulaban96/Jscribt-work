@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$("document").ready(function () {
+		
+		$(".StatePost").css("display","none");
+		$(".usa").css("display","none");
+		$(".postcode").css("display","none");
+
+		$(".country").change(function(){
+			var selected = $(this).children("option:selected").val();
+			
+			if(selected == "Jordan"){
+				$(".ARcity").css("display","inline");
+				$(".city").css("display","inline");
+				$(".city option.j").css("display","inline");
+				$(".city option.l").css("display","none");
+				$(".StatePost").css("display","none");
+				$(".usa").css("display","none");
+				$(".postcode").css("display","none");
+				
+			}
+			if(selected == "Lebanon"){
+				$(".ARcity").css("display","inline");
+				$(".city").css("display","inline");
+				$(".city option.l").css("display","inline");
+				$(".city option.j").css("display","none");
+				$(".StatePost").css("display","none");
+				$(".usa").css("display","none");
+				$(".postcode").css("display","none");
+			}
+			if(selected == "USA"){
+				
+				$(".ARcity").css("display","none");
+				$(".city").css("display","none");
+				$(".StatePost").css("display","inline");
+				$(".usa").css("display","inline");
+				$(".postcode").css("display","inline");
+				
+			}
+		});
+
+	});
+</script>
+<style type="text/css">
+	fieldset{
+		height: 600px;
+		border-style: double;
+	}
+	label{
+		width: 100px;
+		font-size: 30px;
+		margin-left: 10px;
+	}
+	select{
+		text-align: center;
+		width:300px;
+		height: 40px;
+		margin-left: 50px;
+	}
+	option{
+		font-size: 20px;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<fieldset>
+		<legend>Choose a Country</legend>
+		<form>
+			<label>Country : </label>
+			<select class="country">
+				<option disabled selected>--Country--</option>
+				<option>Jordan</option>
+				<option>Lebanon</option>
+				<option>USA</option>
+			</select>
+			<label class="ARcity">City : </label>
+			<select class="city">
+				<option disabled selected>--City--</option>
+				<option class="j">Amman</option>
+				<option class="j">Salt</option>
+				<option class="j">Zarqa</option>
+				<option class="l">Beriut</option>
+				<option class="l">Tripoli</option>
+				<option class="l">Sidon</option>
+			</select>
+			<label class="StatePost" >State : </label>
+			<select class="usa">
+				<option disabled selected>--State--</option>
+				<option>California</option>
+				<option>Miami</option>
+				<option>Chicago</option>
+			</select>
+			<label class="StatePost" >Postal Code : </label>
+			<select class="postcode">
+				<option disabled selected>--zip Code--</option>
+				<option>93510</option>
+				<option>33056</option>
+				<option>60601</option>
+			</select>
+		</form>
+	</fieldset>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$("document").ready(function () {
+		$("th").css("background-color","blue");
+		$("tr:odd").css("background-color","red");
+		var x= $("div").html();
+		//alert(x);
+		$("div").html("HTU");
+		$("div").append(" University");
+		$("div").prepend("The ");
+		$("p").after("<hr>");
+		$("p").before("<br>");
+		$("a").attr("target","_blanck");
+		$("a").removeAttr("href");
+		$("hr").remove();
+		$("#bt1").click(function(){
+			$("a").hide("3000");
+		});
+		$("#bt2").click(function(){
+			$("a").show("3000");
+		});
+		$("#bt3").click(function(){
+			$("a").toggle("3000");
+		});
+
+	});
+</script>
+</head>
+<body >
+	<button id="bt1">Hide</button>
+	<button id="bt2">Show</button>
+	<button id="bt3">Show / Hide</button>
+	<div>Hello World !!!!</div>
+	<p> Hello World pra!!!!</p>
+	<p> Hello World pra!!!!</p>
+	<p> Hello World pra!!!!</p>
+	<p> Hello World pra!!!!</p>
+	<p> Hello World pra!!!!</p>
+	<p> Hello World pra!!!!</p>
+	<a href="http://www.google.com">GOOGLE</a>
+	<a href="http://www.google.com">GOOGLE</a>
+	<a href="http://www.google.com">GOOGLE</a>
+	<table width="100%" border ="1" style="height: 50%">
+		<th colspan="3">1232</th>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+		<tr>
+			<td>2121</td>
+			<td>2111</td>
+			<td>5489</td>
+		</tr>
+	</table>			
+</body>
+</html>

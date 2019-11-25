@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$("document").ready(function () {
+		
+		$("input").before("<br>");
+		$("#chk").click(function(){
+			
+				$(".rd").css("color","red");
+				$(".rd:first").css("color","green");
+		});
+
+	});
+</script>
+</head>
+<body>
+	<h2>What is the Capital of Jordan ?</h2>
+	<input type="radio" name="HTU" value="Amman"><span class ="rd">Amman</span>
+	<input type="radio" name="HTU" value="Irbid"><span class ="rd">Irbid</span>
+	<input type="radio" name="HTU" value="Aqaba"><span class ="rd">Aqaba</span>
+	<input type="radio" name="HTU" value="Zarqa"><span class ="rd">Zarqa</span>
+	<br><br>
+	<button id="chk">CheackAnswers</button>
+</body>
+</html>

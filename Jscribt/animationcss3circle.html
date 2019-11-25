@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+
+	<title></title>
+		<style type="text/css">
+			/*@keyframes animat1{
+				from {background-color:red;}
+				to {background-color:yellow;}
+			} */
+			#d1{
+
+				width: 200px;
+				height: 200px;
+				margin: 200px;
+				border-radius:50%;
+				border:2px solid #00f;
+				position: relative;
+				/*animation:animat1 4s infinite;*/ 
+				/*transition: transform infinite;*/
+		}
+			#d1:hover{
+				animation-play-state: paused;
+			}
+		@keyframes animat2{
+				from{transition: transform;}
+				to{transform: rotate(360deg);}
+			} 
+			#d1{
+
+				width: 200px;
+				height: 200px;
+				margin: 200px;
+				background-color:red; 
+				animation:animat2 4s infinite linear ; 
+
+		}
+		#d2{
+
+				width: 20px;
+				height: 20px;
+				/*padding-top: 15px;*/
+				margin:85px auto;
+				border-radius:50%;
+				background-color:#00f;
+				position: relative;
+				
+				/*animation:animat1 4s infinite;*/ 
+
+		}
+		#d3{
+
+				width: 10px;
+				height: 100px;
+				/*padding-top: 15px;*/
+				margin:85px auto;
+				background-color:#00f;
+				position: relative;
+				
+				/*animation:animat1 4s infinite;*/ 
+
+		}
+		</style> 
+</head>
+<body>
+	<div id="d1">
+		<div id="d2">
+			<div id="d3">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
